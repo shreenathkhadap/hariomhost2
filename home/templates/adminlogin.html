@@ -1,0 +1,322 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <!--<link rel="stylesheet" href="style/adminlogin.css">-->
+    <style>
+      
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+header{
+
+  display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 30px ,10%;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+background-color: #a4ebf3;
+}
+
+.navbar{
+  background-color: #a4ebf3;
+border-radius: 30px;
+font-family: 'Lexend Deca', sans-serif;
+}
+
+.navbar li{
+  float:left;
+  list-style: none; 
+  margin: 13px 20px;
+}
+.navbar ul{
+  overflow: auto;
+}
+
+.navbar li a{
+  padding: 3px 3px;
+text-decoration: none;
+color: rgb(0, 0, 0);
+
+
+transition: all 0.3s ease 0s;
+}
+
+
+
+
+
+
+
+
+.navbar li a:hover{
+  color: #0096FF;
+      }
+
+
+
+
+.logo{
+  cursor: pointer;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+
+
+  .login li{
+      
+      float:left;
+      list-style: none; 
+      margin: 13px 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .login ul{
+      overflow: auto;
+  }
+  
+  .login li a{
+    padding: 3px 3px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Lexend Deca', sans-serif;
+    
+    transition: all 0.3s ease 0s;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  .login li a:hover{
+              color: #0096FF;
+              font-family:'Lexend Deca', sans-serif;
+          }
+  
+.line{
+
+  color:#0096FF ;
+}
+
+.fix{
+
+  
+      
+      
+      /* display: block; */
+    
+      
+      overflow: hidden;
+    
+}
+
+.text1{
+
+  position: absolute;
+  color: #AACCFF;
+  top: 150px;
+  left: 100px;
+  padding-right: 500px;
+  
+  
+  text-decoration: none;
+  border: palegoldenrod 2px solid;
+  border-radius: 20px;
+  
+
+}
+
+.text1 li{
+
+  text-decoration: none;
+
+  padding: 50px;
+}
+.text1 ul{
+
+text-decoration: none;
+
+}
+
+.img2 {
+
+  position: absolute;
+  top: 160px;
+  left: 665px;
+ 
+  
+}
+
+button {
+
+      position: absolute;
+      top: 520px;
+      border-radius: 20px;
+      left: 200px;
+      border: none;
+      
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    
+}
+
+.button1 {
+  background-color: #002D62; 
+  color: #AACCFF; 
+  border: 2px solid palegoldenrod;
+}
+
+.button1:hover {
+  background-color:#0952a5;
+  color: white;
+}
+/* #34495e */
+
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+ 
+}
+.box{
+  width: 500px;
+  height: 400px;
+  padding: 40px;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  /* background: #131111; */
+  /* box-shadow: black 10px, 10px; */
+  background-image: linear-gradient(40deg , #3082fc ,rgb(212, 211, 211));
+  text-align: center;
+}
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.box input[type = "text"],.box input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2f79aa;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+  width: 280px;
+  border-color: #1eafc2;
+}
+.box input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2f79aa;
+  padding: 14px 40px;
+  outline: none;
+  color: rgb(0, 0, 0);
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+  background: #bbd6ff;
+}
+
+a{
+
+  text-decoration: none;
+
+}
+    </style>
+</head>
+<body>
+    <header>
+      <img class= "logo" src={% static "logo23.jpg" %}  alt="logo" height="50px" width="50px" >
+        <nav class="navbar">
+            
+            <ul>
+                
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact us</a></li>
+                
+               
+            </ul>
+        </nav>
+        <div class="login">
+
+
+            <ul>
+
+                
+                <li><a href="/prelogin"><strong>LOGIN</strong></a></li>
+                
+            </ul>
+            
+        </div>
+    </header>
+    {%if msg%}
+    <script>
+        window.alert('{{msg}}');
+    </script>
+    {% endif%}
+
+    
+    
+    
+        <hr>
+
+
+
+         
+
+         <form class="box" action="/postloginadmin/" method="post">
+          {% csrf_token %} 
+            <h1>Login as Admin User</h1>
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <!-- <a href="/lh1.html"> -->
+            <input type="submit" name="" value="submit"></a>
+          </form>
+          
+              
+
+</body>

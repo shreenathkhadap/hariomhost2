@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+         table, th, td {
+            border: 1px solid black;
+         }
+      </style>
+   </head>
+
+   <body>
+    {% for company in compdetails%}
+    {% for eachcompkey,eachcompval in company.items%}
+    {% if eachcompkey == 'Company Name' %}
+        {{eachcompval}} <br> 
+    {%endif%}
+    {% if eachcompkey == 'Product Name' %}
+        {{eachcompval}} <br> 
+    {%endif%}       
+    {% endfor %}
+    {% endfor %}
+        <!-- <p style="color: black;padding: 10px 0;">Want to Update User Details ?<a href="/adminupdate" style="color: blue;">Click Here to Update</a></p>
+        <p style="color: black;padding: 10px 0;">Want to Delete User ?<a href="/deleteuser" style="color: blue;">Click Here to Delete</a></p> -->
+   </body>
+</html>

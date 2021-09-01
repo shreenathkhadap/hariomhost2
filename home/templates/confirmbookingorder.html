@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+  <style>
+    body{
+  text-align: center;
+  align-items: center;
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+
+
+}
+
+a{
+text-decoration: none;
+}
+
+header{
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 30px ,10%;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+background-color: #a4ebf3;
+/* background-color: #24242A; */
+}
+
+.navbar{
+background-color: #a4ebf3;
+border-radius: 30px;
+font-family: 'Lexend Deca', sans-serif;
+
+}
+
+.navbar li{
+float:left;
+list-style: none; 
+margin: 13px 20px;
+}
+.navbar ul{
+overflow: auto;
+}
+
+.navbar li a{
+padding: 3px 3px;
+text-decoration: none;
+color: rgb(0, 0, 0);
+
+
+transition: all 0.3s ease 0s;
+}
+
+
+
+
+
+
+
+
+.navbar li a:hover{
+      color: #0096FF;
+  }
+
+
+
+
+.logo{
+cursor: pointer;
+margin-left: 15px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+
+.login li{
+  
+  float:left;
+  list-style: none; 
+  margin: 13px 20px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: bold;
+}
+.login ul{
+  overflow: auto;
+}
+
+.login li a{
+  padding: 3px 3px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: 'Lexend Deca', sans-serif;
+  
+  transition: all 0.3s ease 0s;
+}
+
+
+
+
+
+
+
+
+.login li a:hover{
+          color: #0096FF;
+
+      }
+
+.line{
+
+color:#0096FF ;
+}
+
+/* .fix{
+
+
+  
+  
+  /* display: block; */
+
+  
+  /* overflow: hidden; 
+
+}  */
+
+.text1{
+
+display: flex;
+margin-top: 30px;
+
+justify-content: center;
+color:  	#242424;
+/* vertical-align: middle; */
+width: 73%;
+margin-left: auto;
+margin-right: auto;
+
+
+
+
+text-decoration: none;
+border: rgb(0, 0, 0) 2px solid;
+/* border-width: 50px; */
+border-radius: 20px;
+margin-bottom: 20px;
+
+
+}
+
+.text1 li{
+
+list-style: none;
+
+padding: 50px;
+}
+.text1 ul{
+list-style: none;
+
+}
+
+.img2 {
+
+
+padding: 10px;
+
+
+}
+button{
+
+display: block;
+
+
+
+}
+
+button {
+
+  /* position: absolute; */
+  /* top: 520px; */
+  border-radius: 20px;
+  /* left: 500px; */
+  border: none;
+  
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+
+.button1 {
+background-color: #c1f3fa; 
+color: #020202; 
+text-decoration: none;
+border: 2px solid rgb(0, 0, 0);
+}
+
+.button1:hover {
+background-color:#8ccaf7;
+color: rgb(0, 0, 0);
+} 
+
+
+.co  {
+flex: 1;
+text-align: center;
+margin-top: 10px;
+}
+.co ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 2px 11px;
+  position: relative;
+}
+.co a{
+color: #020202;
+}
+
+.box input[type = "submit"]:hover{
+background: #bbd6ff;
+}
+
+.box{
+  width: 800px;
+      height: 950px;
+      border-radius: 25px;
+      margin-left: 24%;
+      /* margin-top: 2%;  */
+      margin-bottom: 50px;
+      /* position: absolute; */
+      
+      /* transform: translate(-50%,-50%); */
+      /* background: #131111; */
+      /* box-shadow: black 10px, 10px; */
+      background-image: linear-gradient(40deg , #3082fc ,rgb(212, 211, 211));
+      text-align: center;
+  
+
+background-position: center;
+background-size: cover;
+position: relative;
+      
+      text-align: center;
+    }
+    .box h1{
+      color: white;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .box input[type = "text"],.box input[type = "password"] ,.box input[type = "number"],.box input[type = "phone"],.box input[type = "date"]{
+      border:0;
+      background: white;
+      display: inline;
+      margin: 20px auto;
+      text-align: center;
+      border: 2px solid #2f79aa;
+      padding: 14px 40px;
+      width: 400px;
+      outline: none;
+      color: rgb(0, 0, 0);
+      border-radius: 24px;
+      transition: 0.25s;
+    }
+    .box select{
+      
+      border:0;
+      background: white;
+      display: inline;
+      margin: 20px auto;
+      text-align: center;
+      align-items: center;
+      border: 2px solid #2f79aa;
+      /* padding: 10px 10px; */
+      /* height: 70px; */
+      width: 200px;
+      outline: none;
+      color: black;
+      border-radius: 24px;
+      transition: 0.25s;
+      text-align: center;
+
+    }
+    
+
+    label{
+
+      width: 240px;
+      display: inline-block;
+      text-align: left;
+    }
+    
+    .box input[type = "text"]:focus,.box input[type = "password"]:focus{
+      width: 580px;
+      border-color: #1eafc2;
+    }
+    .box input[type = "submit"]{
+      border:0;
+      background: white;
+      display: inline;
+      margin: 20px auto;
+      text-align: center;
+      border: 2px solid #286791;
+      padding: 14px 40px;
+      outline: none;
+      color: rgb(0, 0, 0);
+      border-radius: 24px;
+      transition: 0.25s;
+      cursor: pointer;
+    }
+    .box input[type = "submit"]:hover{
+      background: #a4ebf3;
+      color: black;
+    }
+    option{
+        text-align: center;
+        align-items: center;
+    }
+
+   
+
+
+  </style>
+</head>
+<body style="background-color:  #ffffff;">
+    <header>
+        <img class= "logo" src=/static/logo23.jpg  alt="logo" height="50px" width="50px" >
+        
+        <nav class="navbar">
+            
+            <ul>
+                
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact us</a></li>
+                
+               
+            </ul>
+        </nav>
+        <div class="login">
+
+
+            <ul>
+
+                
+                <li><a href="/prelogin">LOGIN</a></li>
+                
+            </ul>
+            
+        </div>
+    </header>
+
+    
+
+        <hr >
+
+
+        
+        
+         
+<div class="co">
+  
+<ul >
+  <form class="box" action="/postconfirmbookingorder/"  method="POST">
+    <label style="font-size: 210%; margin-left: 2%; margin-top: 30px;" for="fname" ><b>Confirm Order</b></label><br><br>
+  {% csrf_token %}
+   
+    <label style="font-size: 130%; margin-left: 2%;" for="fname" >BILL ID:</label>
+   <input type="text" name="bill_id" style="font-size: 18pt; height: 35px; width:240px; " value={{bill_id}} readonly><br>
+  <!-- <label style="font-size: 130%; margin-left: 2%;" for="fname" >Total Cost :</label>
+ <input type="text" name="totalcost" style="font-size: 18pt; height: 35px; width:240px; " value={{totalcost}} readonly><br> -->
+  <label style="font-size: 130%; margin-left: 2%;" for="fname" >City(From) :</label>
+  <input type="text" name="fromcity" style="font-size: 18pt; height: 35px; width:240px; " value={{fromcity}} readonly><br>
+  <label style="font-size: 130%; margin-left: 2%;" for="fname" >Company Name :</label>
+  <input type="text" name="company_name" style="font-size: 18pt; height: 35px; width:240px; " value={{company_name}} readonly><br>
+  <label style="font-size: 130%; margin-left: 2%;" for="fname" >Docket Number :</label>
+  <input type="text" name="docket_no" style="font-size: 18pt; height: 35px; width:240px; " value={{docket_no}} readonly><br>
+  <label style="font-size: 130%; margin-left: 2%;" for="fname" >Date :</label>
+  <input type="date" name="datee" style="font-size: 18pt; height: 35px; width:240px; " value={{datee}} readonly><br>
+  
+  <label style="font-size: 130%; margin-left: 2%;" for="fname" >Destination :</label>
+  <input type="text" name="destination" style="font-size: 18pt; height: 35px; width:240px; " value={{destination}} readonly><br>
+  <label style="font-size: 130%; margin-left: 2%;" for="fname" >Party Name :</label>
+  <input type="text" name="partyname" style="font-size: 18pt; height: 35px; width:240px; " value={{partyname}} readonly><br>
+  <label style="font-size: 130%; margin-left: 2%;" for="fname" >Number Of Packages :</label>
+  <input type="text" name="noofpckg" style="font-size: 18pt; height: 35px; width:240px; " value={{noofpckg}} readonly><br>
+  <label style="font-size: 130%; margin-left: 2%;" for="fname" >Description(Said to Contain) :</label>
+  <input type="text" name="description" style="font-size: 18pt; height: 35px; width:240px; " value={{description}} readonly><br>
+  <label style="font-size: 130%; margin-left: 2%;" for="fname" >Invoice Number :</label>
+  <input type="text" name="invoice_no" style="font-size: 18pt; height: 35px; width:240px; " value={{invoice_no}} readonly><br>
+  <input type="submit" name="submit" value="Confirm Your Order"></a>
+</ul>
+
+</div>
+  </form>
+    </body>
+        
+</html>
+ 
+
+

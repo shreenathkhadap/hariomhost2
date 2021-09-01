@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/usertable.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+      <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            
+          }
+          
+          
+          header{
+          
+            display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 30px ,10%;
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          background-color: #a4ebf3;
+          }
+          
+          .navbar{
+            background-color: #a4ebf3;
+          border-radius: 30px;
+          font-family: 'Lexend Deca', sans-serif;
+          }
+          
+          .navbar li{
+            float:left;
+            list-style: none; 
+            margin: 13px 20px;
+          }
+          .navbar ul{
+            overflow: auto;
+          }
+          
+          .navbar li a{
+            padding: 3px 3px;
+          text-decoration: non}
+.logo{
+    cursor: pointer;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+    .login li{
+        
+        float:left;
+        list-style: none; 
+        margin: 13px 20px;
+        font-family: 'Lexend Deca', sans-serif;
+    }
+    .login ul{
+        overflow: auto;
+    }
+    
+    .login li a{
+        padding: 3px 3px;
+        text-decoration: none;
+        color: black;
+        
+        transition: all 0.3s ease 0s;
+    } 
+    .login li a:hover{
+                color: #0096FF;
+                font-family: 'Lexend Deca', sans-serif;
+            }
+    
+.line{
+    color:#0096FF ;
+}
+.fix{       
+        /* display: block; */
+      
+        
+        overflow: hidden;
+}
+.text1{
+
+    position: absolute;
+    color: #AACCFF;
+    top: 150px;
+    left: 100px;
+    padding-right: 500px;
+    
+    
+    text-decoration: none;
+    border: palegoldenrod 2px solid;
+    border-radius: 20px;
+}
+.text1 li{
+
+    text-decoration: none;
+
+    padding: 50px;
+}
+.text1 ul{
+
+text-decoration: none;
+
+}
+
+.img2 {
+
+    position: absolute;
+    top: 160px;
+    left: 665px;
+   
+    
+}
+a{
+    text-decoration:none;
+
+    color: black;
+}
+button {
+
+        position: absolute;
+        top: 520px;
+        border-radius: 20px;
+        left: 200px;
+        border: none;
+        
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      
+}
+  
+.button1 {
+    background-color: #002D62; 
+    color: #AACCFF; 
+    border: 2px solid palegoldenrod;
+  }
+
+  .button1:hover {
+    background-color:#0952a5;
+    color: white;
+  }
+  
+        body {
+          background-color:#ffff;
+        }
+        
+         table, th, td {
+             text-align: left;
+           margin-top: 50px;
+           margin-left: 25%;
+          border: 3px solid rgba(88, 86, 86, 0.856);
+          height: 20px;
+         }
+          table{
+          width: 55%;
+          border-collapse: collapse;
+          text-align: center;
+         }
+        .inn{
+            text-align: center;
+        }
+         caption{
+           font-size: large;
+         }
+      </style>
+   </head>
+
+   <body>
+    <header>
+            <img class= "logo" src={% static "logo23.jpg" %} alt="logo" height="50px" width="50px" > 
+        <nav class="navbar">
+            
+            <ul>
+                
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact us</a></li>
+                
+               
+            </ul>
+        </nav>
+        <div class="login">
+  
+  
+            <ul>
+  
+                
+                <li><a href="/prelogin.html"><strong>LOGIN</strong></a></li>
+                
+            </ul>
+            
+        </div>
+    </header>
+    <hr>
+      <table border='1'>
+        <caption><strong>Admin Users</strong></caption>
+        <thead>
+         <tr>
+           <th>Address</th>
+           <th>City</th>
+           <th>Email</th>
+           <th>Name</th>
+           <th>Phone Number</th>
+           <th>Pincode</th>
+           <th>State</th>
+           <th>User Id</th>
+         </tr>
+        </thead>
+        <tbody>
+            {%for user in admindata%}
+            <tr>
+                {% for row in user.values %}
+                    <td>{{row}}</td>
+                {% endfor %} 
+                
+        </tbody>
+            </tr>      
+            {% endfor %} 
+            
+        </tbody>  
+        </tbody>
+      <table border='1'>
+        <caption><strong>Booking Users</strong></caption>
+        <thead>
+         <tr>
+          <th>Address</th>
+          <th>City</th>
+          <th>Email</th>
+          <th>Name</th>
+          <th>Phone Number</th>
+          <th>Pincode</th>
+          <th>State</th>
+          <th>User Id</th>
+         </tr>
+        </thead>
+        <tbody>
+            {%for user in bookingdata%}
+            <tr>          
+                {% for row in user.values %}
+                    <td> {{row}} </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+      <table border='1'>
+        <caption><strong>Users</strong></caption>
+        <thead>
+         <tr>
+          <th>Address</th>
+          <th>City</th>
+          <th>Email</th>
+          <th>Name</th>
+          <th>Phone Number</th>
+          <th>Pincode</th>
+          <th>State</th>
+          <th>User Id</th>
+         </tr>
+        </thead>
+        <tbody>
+            {%for user in dispatchdata%}
+            <tr>
+                {% for row in user.values %}
+                    <td>{{row}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+      <table border='1'>
+          <caption><strong>MIS Users</strong></caption>
+        <thead>
+         <tr>
+          <th>Address</th>
+          <th>City</th>
+          <th>Email</th>
+          <th>Name</th>
+          <th>Phone Number</th>
+          <th>Pincode</th>
+          <th>State</th>
+          <th>User Id</th>
+         </tr>
+        </thead>
+        <tbody>
+            {%for user in misdata%}
+            <tr>
+                {% for row in user.values %}
+                    <td>{{row}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+        <div class="inn">
+
+            <p style="color: black;padding: 10px 0;">Want to Update User Details ?<a href="/checkuserupdate" style="color: blue;">Click Here to Update</a></p>
+            <p style="color: black;padding: 10px 0;">Want to Delete User ?<a href="/deleteuser" style="color: blue;">Click Here to Delete</a></p>
+            
+           </div>
+        </body>
+</html>

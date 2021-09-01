@@ -1,0 +1,297 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="wx.css"> -->
+
+    <style>
+      
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+
+
+}
+a{
+text-decoration: none;
+}
+
+header{
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 30px ,10%;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+background-color: #a4ebf3;
+/* background-color: #24242A; */
+}
+
+.navbar{
+background-color: #a4ebf3;
+border-radius: 30px;
+font-family: 'Lexend Deca', sans-serif;
+
+}
+
+.navbar li{
+float:left;
+list-style: none; 
+margin: 13px 20px;
+}
+.navbar ul{
+overflow: auto;
+}
+
+.navbar li a{
+padding: 3px 3px;
+text-decoration: none;
+color: rgb(0, 0, 0);
+
+
+transition: all 0.3s ease 0s;
+}
+
+
+
+
+
+
+
+
+.navbar li a:hover{
+        color: #0096FF;
+    }
+
+
+
+
+.logo{
+cursor: pointer;
+margin-left: 15px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+
+.login li{
+    
+    float:left;
+    list-style: none; 
+    margin: 13px 20px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: bold;
+}
+.login ul{
+    overflow: auto;
+}
+
+.login li a{
+    padding: 3px 3px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Lexend Deca', sans-serif;
+    
+    transition: all 0.3s ease 0s;
+}
+
+
+
+
+
+
+
+
+.login li a:hover{
+            color: #0096FF;
+
+        }
+
+.line{
+
+color:#0096FF ;
+}
+
+/* .fix{
+
+
+    
+    
+    /* display: block; */
+  
+    
+    /* overflow: hidden; 
+  
+}  */
+
+.text1{
+
+display: flex;
+margin-top: 30px;
+
+justify-content: center;
+color:  	#242424;
+/* vertical-align: middle; */
+width: 73%;
+  margin-left: auto;
+  margin-right: auto;
+
+
+
+
+text-decoration: none;
+border: rgb(0, 0, 0) 2px solid;
+/* border-width: 50px; */
+border-radius: 20px;
+margin-bottom: 20px;
+
+
+}
+
+
+.text1 li{
+
+list-style: none;
+
+padding: 40px;
+}
+.text1 ul{
+list-style: none;
+
+}
+
+.img2 {
+
+
+padding: 10px 10px;
+
+
+}
+button{
+
+display: block;
+
+
+
+}
+
+button {
+
+    /* position: absolute; */
+    /* top: 520px; */
+    border-radius: 20px;
+    /* left: 500px; */
+    border: none;
+    
+    padding: 16px 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #242424;
+    
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  
+}
+
+.button1 {
+background-color: #c1f3fa; 
+color: #020202; 
+text-decoration: none;
+border: 2px solid rgb(0, 0, 0);
+}
+
+.button1:hover {
+background-color:#8ccaf7;
+color: rgb(0, 0, 0);
+} 
+
+
+
+    </style>
+</head>
+<body style="background-color:  #ffffff;">
+    <header>
+        <img class= "logo" src={% static "logo23.jpg" %}  alt="logo" height="50px" width="50px" >
+        <!--<img class= "logo" src="/home/templates/logo23.jpg" alt="logo" height="50px" width="50px" > -->
+        <nav class="navbar">
+            
+            <ul>
+                
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact us</a></li>
+                
+               
+            </ul>
+        </nav>
+        <div class="login">
+
+
+            <ul>
+
+                
+                <li><a href="/prelogin">LOGIN</a></li>
+                
+            </ul>
+            
+        </div>
+    </header>
+
+    
+
+        <hr >
+        
+   <div class="fix">
+       <!-- <img src={% static "blue.jpg" %} alt="background" height="100%" >  -->
+       <!--<img src="/home/static/1092758.jpg" alt="background" height="100%" >-->
+    </div>
+
+
+    <div class="text1">
+      <ul>
+          
+          <li> <h2>We Deliever You the Best we have got !</h2></li>
+          <hr>
+          <li><h2>Best in Business since 2002 and Counting</h2></li>
+          <hr>
+          <li><h2>Client Satisfaction Guaranteed</h2></li>
+          <hr>
+      </ul>
+      <div class="img2">
+        <img src={% static "7.jpg" %} alt="img" width="450px" height="370px" style="border-radius: 20px;" >
+        <!--<img src="7.jpg" alt="img" width="450px" height="370px" style="border-radius: 20px;">-->
+    </div>
+    <!-- <button type="button"  class="button1 "><a  href = "/prelogin" >JOIN NOW</a></button> -->
+  </div>
+
+    
+
+
+    <!-- <a href="/prelogin"><button class="button button1" href = "/prelogin">JOIN NOW</button></a> -->
+
+    <a type="button"  class="button1 " style=" margin: auto; " href = "/prelogin"><button class="button1 " style=" margin: auto; " href = "/prelogin" >JOIN NOW</button></a>
+
+    </body>
+
+    
+
+        
+      
+        
+</html>  
+
+

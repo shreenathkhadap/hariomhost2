@@ -1,0 +1,321 @@
+
+{% load static %}
+<!DOCTYPE html>
+
+
+
+
+<html>
+    {%if msg%}
+    <script>
+        window.alert('{{msg}}');
+    </script>
+    {% endif%}
+    <head>
+      <script src={% static "cities.js" %}></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>REGISTER ADMIN</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href="AdminPanel.css"> -->
+        <style>
+
+            
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+
+
+}
+
+
+
+a{
+text-decoration: none;
+}
+
+header{
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 30px ,10%;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+background-color: #a4ebf3;
+/* background-color: #24242A; */
+}
+
+.navbar{
+background-color: #a4ebf3;
+border-radius: 30px;
+font-family: 'Lexend Deca', sans-serif;
+
+}
+
+.navbar li{
+float:left;
+list-style: none; 
+margin: 13px 20px;
+}
+.navbar ul{
+overflow: auto;
+}
+
+.navbar li a{
+padding: 3px 3px;
+text-decoration: none;
+color: rgb(0, 0, 0);
+
+
+transition: all 0.3s ease 0s;
+}
+
+
+
+
+
+
+
+
+.navbar li a:hover{
+        color: #0096FF;
+    }
+
+
+
+
+.logo{
+cursor: pointer;
+margin-left: 15px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+
+.login li{
+    
+    float:left;
+    list-style: none; 
+    margin: 13px 20px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: bold;
+}
+.login ul{
+    overflow: auto;
+}
+
+.login li a{
+    padding: 3px 3px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Lexend Deca', sans-serif;
+    
+    transition: all 0.3s ease 0s;
+}
+
+
+
+
+
+
+
+
+.login li a:hover{
+            color: #0096FF;
+
+        }
+
+.line{
+
+color:#0096FF ;
+}
+
+.text1 li{
+
+list-style: none;
+
+padding: 50px;
+}
+
+
+.text1 ul{
+list-style: none;
+
+}
+
+.img2 {
+
+
+padding: 10px;
+
+
+}
+button{
+
+display: block;
+
+
+
+}
+
+button {
+
+    /* position: absolute; */
+    /* top: 520px; */
+    border-radius: 20px;
+    /* left: 500px; */
+    border: none;
+    
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  
+}
+  
+  
+.box{
+        width: 800px;
+        height: 800px;
+        padding: 40px;
+        border-radius: 25px;
+        margin-left: 22%;
+        margin-top: 2%;
+        margin-bottom: 50px;
+        /* position: absolute; */
+        
+        /* transform: translate(-50%,-50%); */
+        /* background: #131111; */
+        /* box-shadow: black 10px, 10px; */
+        background-image: linear-gradient(40deg , #3082fc ,rgb(212, 211, 211));
+        text-align: center;
+      }
+      .box h1{
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .box input[type = "text"],.box input[type = "password"] ,.box input[type = "number"],.box input[type = "phone"]{
+        border:0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #2f79aa;
+        padding: 14px 10px;
+        width: 400px;
+        outline: none;
+        color: white;
+        border-radius: 24px;
+        transition: 0.25s;
+      }
+      .box select{
+
+        border:0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #2f79aa;
+        padding: 14px 10px;
+        width: 200px;
+        outline: none;
+        color: black;
+        border-radius: 24px;
+        transition: 0.25s;
+
+
+      }
+      
+      .box input[type = "text"]:focus,.box input[type = "password"]:focus{
+        width: 580px;
+        border-color: #1eafc2;
+      }
+      .box input[type = "submit"]{
+        border:0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #2f79aa;
+        padding: 14px 40px;
+        outline: none;
+        color: rgb(0, 0, 0);
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+      }
+      .box input[type = "submit"]:hover{
+        background: #bbd6ff;
+      }
+   
+
+
+        </style>
+    </head>
+    <body style="background-color:  #ffffff;">
+      <header>
+          <img class= "logo" src={% static "logo23.jpg" %}  alt="logo" height="50px" width="50px" >
+          <!--<img class= "logo" src="/home/templates/logo23.jpg" alt="logo" height="50px" width="50px" > -->
+          <nav class="navbar">
+              
+              <ul>
+                  
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about">About</a></li>
+                  <li><a href="/services">Services</a></li>
+                  <li><a href="/contact">Contact us</a></li>
+                  
+                 
+              </ul>
+          </nav>
+          <div class="login">
+  
+  
+              <ul>
+  
+                  
+                  <li><a href="/prelogin">LOGIN</a></li>
+                  
+              </ul>
+              
+          </div>
+      </header>
+       
+        
+        <hr >
+        
+        <form class="box" action="/postdispatchuser/" method="POST">
+            {% csrf_token %}
+            <h1>DISPATCH USER</h1>
+            Search Orders : 
+            <div>
+            <label><b>From Date:</b></label>
+            <input type="date" name="date1">
+            </div>
+
+            <div>
+            <label><b> Till Date :</b></label>
+            <input type="date" name="date2">
+           </div>
+            <div>
+            Specify City Name : <br>
+            <label><b> Orders From City:</b></label>
+            <input type="text" name="cityname">
+           </div>
+
+            <input type="submit" name="" value="Submit">
+        </form>
+ </body>
+</html>

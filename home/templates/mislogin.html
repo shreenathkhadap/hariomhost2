@@ -1,0 +1,407 @@
+
+<!--
+
+{%if msg%}
+    <script>
+        window.alert('{{msg}}');
+    </script>
+{% endif%}
+
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+	
+        
+<form action="/postloginbooking/" method="post">
+{% csrf_token %}  
+<section class="text-gray-600 body-font relative">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"><b>BOOKING USER LOGIN</b></h1>
+    </div>
+    <div class="lg:w-1/2 md:w-2/3 mx-auto">    
+        <hr>
+        <hr>
+        <br>
+        <div class="p-2 w-full">
+          <div class="relative">
+            <label for="Email" class="leading-7 text-sm text-gray-600">Email</label>
+            {%if tempmail%}
+            <input Value={{tempmail}} type="Email" id="Email" name="username" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            {%else%}	
+            <input type="Email" id="Email" name="username" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            {% endif%}          
+          </div>
+        </div>
+        <div class="p-2 w-full">
+            <div class="relative">
+              <label for="Password" class="leading-7 text-sm text-gray-600">Password</label>
+              <input type="password" id="password" name="password" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+        
+        <br>
+        <div class="p-2 w-full">
+          <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"    >Submit</button>
+          <br>
+          <hr>
+          <br>
+         <p style="color: black;padding: 10px 0;">Forgot Password? <a href="/bookingforget" style="color: blue;">Click Here to Reset</a></p>
+        </div>
+        <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center bg-black border-b-2">
+          <a class="text-indigo-500">Logisticmanagement@logistic.ac.in</a>
+          <p class="leading-normal my-5">Type Address Here
+            <br>Give another subheading
+          </p>
+          <span class="inline-flex">
+            <a class="text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class="ml-4 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-4 text-gray-500">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a class="ml-4 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+              </svg>
+            </a>
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+</form>	
+-->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <!--<link rel="stylesheet" href="style/adminlogin.css">-->
+    <style>
+      
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+header{
+
+  display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 30px ,10%;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+background-color: #a4ebf3;
+}
+
+.navbar{
+  background-color: #a4ebf3;
+border-radius: 30px;
+font-family: 'Lexend Deca', sans-serif;
+}
+
+.navbar li{
+  float:left;
+  list-style: none; 
+  margin: 13px 20px;
+}
+.navbar ul{
+  overflow: auto;
+}
+
+.navbar li a{
+  padding: 3px 3px;
+text-decoration: none;
+color: rgb(0, 0, 0);
+
+
+transition: all 0.3s ease 0s;
+}
+
+
+
+
+
+
+
+
+.navbar li a:hover{
+  color: #0096FF;
+      }
+
+
+
+
+.logo{
+  cursor: pointer;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }
+
+
+  .login li{
+      
+      float:left;
+      list-style: none; 
+      margin: 13px 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .login ul{
+      overflow: auto;
+  }
+  
+  .login li a{
+    padding: 3px 3px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Lexend Deca', sans-serif;
+    
+    transition: all 0.3s ease 0s;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  .login li a:hover{
+              color: #0096FF;
+              font-family:'Lexend Deca', sans-serif;
+          }
+  
+.line{
+
+  color:#0096FF ;
+}
+
+.fix{
+
+  
+      
+      
+      /* display: block; */
+    
+      
+      overflow: hidden;
+    
+}
+
+.text1{
+
+  position: absolute;
+  color: #AACCFF;
+  top: 150px;
+  left: 100px;
+  padding-right: 500px;
+  
+  
+  text-decoration: none;
+  border: palegoldenrod 2px solid;
+  border-radius: 20px;
+  
+
+}
+
+.text1 li{
+
+  text-decoration: none;
+
+  padding: 50px;
+}
+.text1 ul{
+
+text-decoration: none;
+
+}
+
+.img2 {
+
+  position: absolute;
+  top: 160px;
+  left: 665px;
+ 
+  
+}
+
+button {
+
+      position: absolute;
+      top: 520px;
+      border-radius: 20px;
+      left: 200px;
+      border: none;
+      
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    
+}
+
+.button1 {
+  background-color: #002D62; 
+  color: #AACCFF; 
+  border: 2px solid palegoldenrod;
+}
+
+.button1:hover {
+  background-color:#0952a5;
+  color: white;
+}
+/* #34495e */
+
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+ 
+}
+.box{
+  width: 500px;
+  height: 400px;
+  padding: 40px;
+  border-radius: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  /* background: #131111; */
+  /* box-shadow: black 10px, 10px; */
+  background-image: linear-gradient(40deg , #3082fc ,rgb(212, 211, 211));
+  text-align: center;
+}
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.box input[type = "text"],.box input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2f79aa;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+  width: 280px;
+  border-color: #1eafc2;
+}
+.box input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2f79aa;
+  padding: 14px 40px;
+  outline: none;
+  color: rgb(0, 0, 0);
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+  background: #bbd6ff;
+}
+
+a{
+
+  text-decoration: none;
+
+}
+    </style>
+</head>
+<body>
+    <header>
+      <img class= "logo" src={% static "logo23.jpg" %}  alt="logo" height="50px" width="50px" >
+        <nav class="navbar">
+            
+            <ul>
+                
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/contact">Contact us</a></li>
+                
+               
+            </ul>
+        </nav>
+        <div class="login">
+
+
+            <ul>
+
+                
+                <li><a href="/prelogin"><strong>LOGIN</strong></a></li>
+                
+            </ul>
+            
+        </div>
+    </header>
+    {%if msg%}
+    <script>
+        window.alert('{{msg}}');
+    </script>
+    {% endif%}
+
+    
+    
+    
+        <hr>
+
+
+
+         
+
+         <form class="box" action="/postloginmis/" method="post">
+          {% csrf_token %} 
+            <h1>Login as MIS User</h1>
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <!-- <a href="/lh1.html"> -->
+            <input type="submit" name="" value="submit"></a>
+          </form>
+          
+              
+
+</body>
